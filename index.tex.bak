@@ -1,0 +1,43 @@
+\documentclass[11pt,a4paper]{book}
+
+%\author{yerson pariapaza larico}
+%\title{Tesis Perfil de asasasasasasa}
+%\date{}
+
+\input{preambulo}
+%\makeatletter
+%\let\ps@plain\ps@empty
+%\makeatother
+
+\begin{document}
+\frontmatter
+
+
+\include{Portada/portada}
+\input{Dedicatoria/dedicatoria}
+\input{Agradecimientos/agradecimientos}
+
+\renewcommand{\contentsname}{TABLA DE CONTENIDO }
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+%\printnomenclature
+%\maketitle
+
+\mainmatter
+
+\include{Capitulo1/capitulo1}
+\include{Capitulo2/capitulo2}
+\include{Capitulo3/capitulo3}
+\include{Capitulo4/capitulo4}
+\include{Capitulo5/capitulo5}
+\include{Capitulo6/capitulo6}
+
+
+\bibliography{Referencias/Libros}
+
+
+\end{document}
