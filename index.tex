@@ -1,37 +1,29 @@
-\documentclass[11pt,a4paper]{book}
-%\usepackage{biblatex}
-%\author{yuselenin anquise jihuaña}
-%\title{Tesis}
-%\date{}
+\documentclass[11pt, a4paper]{report}
 
 \input{preambulo}
-%\makeatletter
-%\let\ps@plain\ps@empty
-%\makeatother
-
 \begin{document}
-\frontmatter
 
 \include{Portada/portada}
-\input{Dedicatoria/dedicatoria}
-\input{Agradecimientos/agradecimientos}
+\pagenumbering{roman}
+
+%\input{Dedicatoria/dedicatoria}
+%\input{Agradecimientos/agradecimientos}
 \renewcommand{\contentsname}{TABLA DE CONTENIDO }
 \tableofcontents
-\begin {appendix}
-\listoffigures
+\clearpage
 \listoftables
-\end {appendix}
-%\printnomenclature
-%\maketitle
+\clearpage
+\listoffigures
+\clearpage
 
-\mainmatter
+\setlength{\parskip}{1em}
+\pagenumbering{arabic}
 \include{Capitulo1/capitulo1}
 \include{Capitulo2/capitulo2}
 \include{Capitulo3/capitulo3}
-\include{Capitulo4/capitulo4}
-\include{Capitulo5/capitulo5}
+%\include{Capitulo4/capitulo4}
+%\include{Capitulo5/capitulo5}
 \include{Capitulo6/capitulo6}
+%\include{Capitulo7/capitulo7}
 
-\bibliographystyle{apacite}
-\bibliography{Referencias/Libros}
 \end{document}
