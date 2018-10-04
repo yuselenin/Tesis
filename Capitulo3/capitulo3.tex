@@ -1,14 +1,106 @@
-\chapter{III.BASES TEÓRICAS DE LA INVESTIGACIÓN}
+\chapter{BASES TEÓRICAS DE LA INVESTIGACIÓN}
 \section{Revisión de la literatura}
-\citeA{RodriguezDiaz2012SistemaPersonalizado}  en su artículo titulado “Sistema de ayuda al turista - Modelo para la planificación de un viaje personalizado” utilizó el método multicriterio que tiene en cuenta la conflictividad entre sus objetivos, y tiene en cuenta sus deseos, así como las características del entorno; sus objetivos fueron: Formular el modelo matemático y resolver utilizando la Metaheurística Búsqueda Tabú, recolectar los datos (Localización, distancias, precio, valoración, duración en cada actividad, horario de apertura y cierre, tiempos de desplazamiento de una actividad a otra), desarrollar una interfaz para recoger información y devolver la solución óptima; sus resultados fueron: La construcción de una aplicación de escritorio de ayuda para el turista y demostró su utilidad aplicando en un caso de Andalucía donde incorporó en la base de datos un total de 2.154 atractivos turísticos(548 alojamientos, 296 establecimientos de restauración y 1.206 visitas turísticas).
+\begin{landscape}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{longtable}[c]{|L{2.5cm}|L{1cm}|L{2.5cm}|L{3cm}|L{8cm}|L{6cm}|}
+\caption{Antecedentes de investigación}
+\label{tab:antecedentes}\\
+\hline 
+\textbf{AUTOR}& \textbf{AÑO}& \textbf{TÍTULO}& \textbf{OBJETIVOS}& \textbf{MÉTODOS}& \textbf{RESULTADOS}\\ 
+\hline
+\endfirsthead
+\multicolumn{6}{c}%
+{\tablename\ \thetable\ -- \textit{Continúa de la página anterior}} \\
+\hline
+\textbf{AUTOR}& \textbf{AÑO}& \textbf{TÍTULO}& \textbf{OBJETIVOS}& \textbf{MÉTODOS}& \textbf{RESULTADOS}\\ \hline
+\endhead
+\hline \multicolumn{6}{r}{\textit{Continúa en la siguiente página}} \\
+\endfoot
+\hline
+\endlastfoot
+\citeauthor{RodriguezDiaz2012SistemaPersonalizado}&
+\citeyear{RodriguezDiaz2012SistemaPersonalizado}&
+Sistema de ayuda al turista - Modelo para la planificación de un viaje personalizado &
+Desarrollar una herramienta que proporciona a cada turista un itinerario lo más adecuado posible a sus necesidades, que incluye las distintas actividades que puede realizar en un horario establecido.&
+Utilizó el método multicriterio, que considera la conflictividad entre sus objetivos, y tiene en cuenta sus deseos, así como las características del entorno. Los métodos para sus objetivos fueron:
+\begin{itemize}
+\item Formular el modelo matemático multiobjetivo(minimizar el coste de transporte, minimizar el  coste de las actividades, maximiza la utilidad que reportan las actividades al turista, ajustar el tiempo dedicado a cada tipo de visita durante el tour a los deseos del turista).
+\item Resolver el modelo matemático utilizando metaheurística Búsqueda Tabú.
+\item Recolectar los datos (localización, distancias, precio, valoración, duración en cada actividad, horario de apertura y cierre, tiempos de desplazamiento de una actividad a otra) e incorporar en una base de datos.
+\item Desarrollar una interfaz(aplicación de escritorio) para recoger información del turista(preferencias) a través de formularios, y devolver la solución óptima.
+\end{itemize}&
 
-*Parrafo donde diga en resumen de que tesis usare que partes
+La construcción de una aplicación de escritorio de ayuda para el turista, y demostró su utilidad aplicando en un caso de Andalucía(España) donde incorporó en la base de datos un total de 2.154 atractivos turísticos(548 alojamientos, 296 establecimientos de restauración y 1.206 visitas turísticas). \\ 
+\citeauthor{Silva2018OptimizationItineraries}&
+\citeyear{Silva2018OptimizationItineraries}&
+Optimization approaches to support the planning and analysis of travel itineraries &
+Elaborar itinerarios de viaje teniendo en cuenta los perfiles de los visitantes, las distancias de viaje y los costos. &
+Aborda un problema de planificación de itinerarios de viaje utilizando técnicas de optimización discretas.
+Los métodos para sus objetivos fueron:
+\begin{itemize}
+\item Formulación del modelo Problema del Tour Rentable con Premios Prioritarios(PTPPP), modelo de optimización que tiene como objetivo generar itinerarios que maximicen el valor total de las atracciones visitadas y minimicen el costo total de viaje involucrado.
+\item Para resolver el PTPPP se desarrolla un algoritmo de Búsqueda Tabú Adaptativo.
+\item Para obtener los parámetros de entrada del problema para los casos reales, se utilizan algunas técnicas estadísticas para analizar los datos recopilados, como el análisis de correspondencia multivariante.
+\end{itemize} &
+Se presento resultados computacionales utilizado ejemplos reales de la ciudad de Belém(Brazil), también con ejemplos generados aleatoriamente.
+\\ 
+\citeauthor{mendoza2017diseno}&
+\citeyear{mendoza2017diseno}&
+Diseño e implementación de un circuito turístico inteligente en la Región Puno mediante la metaheurística Búsqueda Tabú &
+Diseñar e implementar un circuito turístico inteligente en la Región Puno mediante la metaheurística Búsqueda Tabú teniendo en cuenta las preferencias de los turistas &
+%Se usó el procedimiento del método de metaheurística Búsqueda Tabú. % TODO: Preguntar
+Los métodos para sus objetivos fueron:
+\begin{itemize}
+\item Diseñar el algoritmo de heurística de construcción basada en el método el Vecino mas Cercano.
+\item Diseñar el algoritmo de heurística de mejoría basada en el Procedimiento de 2 intercambio(2-opt).
+\item Implementar el algoritmo de metaheurística Búsqueda Tabú considerando como argumentos de entrada a la solución obtenida en la heurística de mejoría.
+\item Validar la solución del algoritmo implementado de Búsqueda Tabú con instancias artificiales encontrado en librerías de dominio publico que contengan la mejor solución obtenida hasta la fecha y/o óptima, y datos reales del distrito de Juli(Región Puno) recolectados a través de cuestionarios en las que se consideraron datos de distancias, costos, tiempo, que se tiene al ir de un recurso turístico o emprendimiento a otro recurso.
+\item Desarrollar una aplicación web que integre el algoritmo de Búsqueda Tabú, usando la metodología de desarrollo Agil Programación Extrema (XP), en la que se consideró también el uso de casos de uso y prototipos.
+\end{itemize} &
+Se validó el algoritmo implementado de Búsqueda Tabú con 5 instancias artificiales, con las que al comparar se logró igualar al 60\% de las mejores soluciones encontradas hasta la fecha en la literatura, y se validó también con la información de 13 emprendimientos y 7 recursos turísticos del distrito de Juli, en las que se obtuvo un ciclo hamiltoniano proponiendo un circuito turístico a medida para el turista, que inicia y termina en un mismo lugar y minimiza el costo del recorrido.
+La aplicación web se publicó en un nuevo módulo(ruta inteligente) de la plataforma desarrollada en el proyecto patrocinado por el CONCYTEC y la UPeU fifial Juliaca "Plataforma digital inteligente y Big Data para el turismo rural comunitario en la Región Puno". La aplicación permite que la preferencias puedan ser editadas, eligiendo priorizar entre el costo, distancia y tiempo.
+Se encontró inconvenientes al acceso a la información actualizada y completa del inventario de los recursos turísticos del Ministerio de Comercio Exterior y Turismo.
+\\ 
+\citeauthor{Sylejmani2011SolvingApproach}&
+\citeyear{Sylejmani2011SolvingApproach}&
+Solving touristic trip planning problem by using taboo search approach &
+Presentar un algoritmo que planifica automáticamente un viaje turístico considerando algunas restricciones duras y suaves. Las horas de apertura y cierre de los PDI(Puntos de interés), la duración del viaje y el presupuesto asignado al viaje representan las restricciones duras, mientras que los factores de satisfacción de los PDI y la distancia de viaje en el viaje se consideran restricciones suaves.%TODO: Corregir que el objetivo, poner del trabajo no de la redaccion 
+&
+Métodos por objetivos:
+\begin{itemize}
+\item Formular como problema matemático, como una versión de "Orienteering Problem with Time Windows (OPTW)" traducido como Problema de orientación con ventanas de tiempo. %TODO: Poner como lo hace(cuales son su objetivos de sus funciones)
+\item Desarrollar el algoritmo utilizando el método de búsqueda tabú, en el lenguaje de programación Java, y para describir el algoritmo se usa pseudocódigo.
+\item Validar con instancias de perfiles de turistas y instancias de la ciudad de Viena(Austria).
+\end{itemize} &
+El algoritmo se prueba con 10 instancias de perfiles de turistas y 40 instancias de PDIs de la ciudad de Viena. %TODO: Aumentar mas resultados
+\\ 
+\citeauthor{Beirigo2016AProblem}&
+\citeyear{Beirigo2016AProblem}&
+A parallel heuristic for the travel planning problem &
+Es encontrar una ruta que produzca un itinerario de viaje económico, que incluya vuelos en avión, hoteles, estadías en cada destino y horarios de salida/llegada. &
+Utiliza el método de una heurística de Búsqueda Local Iterada(ILS) paralela para buscar rutas candidatas prometedoras en una red de viajes realista.
+Los objetivos y los métodos son:
+\begin{itemize}
+\item Describir todos los datos de viaje necesarios para implementar el método de optimización, así como las preferencias del viajero que guían el proceso de toma de decisiones.%(destinos, ventana de tiempo de viaje, transporte, hoteles, tiempos de espera, tiempo de permanencia)
+\item Formula el modelo del problema, que representa un problema de ruta más corta dependiente del tiempo(TDSPP, por sus siglas en inglés).
+\item Implementa el método exacto y el enfoque de heurísticas con Búsqueda Local Iterada(ILS) en la cual usa para el método de Greedy solución inicial(crear la ruta), el método de Búsqueda local 2-0pt, Doble perturbación puente(4-Opts), lista de memoria, paralelización, construcción de gráficos de viajes paralelos, paralelo 2-0pt y doble puente paralelo.
+\item Compara la calidad  de los resultados del método exacto con el enfoque heurístico(considerando también algunas versiones diferentes), para lo cual utiliza la métrica de Desviación de porcentaje relativo(RPD).
+\end{itemize} &
+Los resultados son experimentales en 285 instancias, que toma en promedio hasta 3 minutos para alcanzar soluciones en promedio menos del 3\% divergentes de una implementación exacta. Además, el método alcanza la solución óptima en aproximadamente el 30\% de los casos de prueba.
+\\ 
+
+\end{longtable}
+Fuente: Elaboración propia
+\end{landscape}
+%Parrafo donde diga en resumen de que tesis usare que partes y que partes ignorare...
+%TODO: Indagar con otras investigaciones, considerar resumir el enfoque y que cosas son las limitaciones... Sugerencia, hablar del articulo de revisión(A survey...), se podría hablar de cada parte, por ejemplo el método, las formas de evaluar, siempre usando referencias.
+
 \section{Marco Teórico}
 \subsection{Investigación de operaciones}
-
-\subsubsection{Programación lineal}
+\subsubsection{Metodología}
 \subsubsection{Optimización combinatoria}
-
+\paragraph{Optimización multiobjetivo}
+ 
 \subsection{Inteligencia Artificial}
 \subsubsection{Algoritmos de búsqueda}
 \paragraph{Búsqueda no informada}
@@ -16,9 +108,10 @@
 
 \subsection{Problemas relacionados}
 \subsubsection{El Problema del Viajante de Comercio (TSP)}
+
 \subsubsection{Problema de diseño de viaje turístico(TTDP)}
 \subsubsection{Planificación inteligente de viajes(ITP)}
-\subsubsection{Optimización multiobjetivo}
+%\subsubsection{Problema multiobjetivo}
 \subsubsection{Problema de asignación}
 
 \subsection{Complejidad de los problemas}
@@ -28,7 +121,7 @@
 \subsubsection{Exactos}
 \subsubsection{Aproximados}
 
-\subsection{Heurísticas} % se está subiendo el nivel por que es donde tambien se hablará bastante
+\subsection{Heurísticas}  % se está subiendo el nivel por que es donde también se hablará bastante
 \subsubsection{Heurísticas de construcción}
 \subsubsection{Heurísticas de mejora}
 
@@ -36,7 +129,7 @@
 \subsubsection{Búsqueda tabú}
 
 \subsection{Python}
-*Hablar de librerias
+%TODO: Hablar de librerias
 \subsection{Api Google Maps}
 
 \subsection{*Turismo}
@@ -44,4 +137,4 @@
 \subsection{~Puno}
 
 \subsection{*Metodología}
-Poner tabla porque se eligio
+%TODO: Poner tabla porque se eligio
