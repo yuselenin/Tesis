@@ -1,0 +1,69 @@
+Acontinuación primeramente se presentará el modelo propuesto y luego se detallará el trabajo a realizarse por objetivos de acuerdo a la metodología de investigación de operaciones:
+\subsubsection{Fase 1: Definición y formulación del problema}
+Se plantea el problema de decisión con los siguientes elementos de acuerdo a \citeA{RodriguezDiaz2012SistemaPersonalizado}: 
+\begin{itemize}
+    \item El responsable de la decisión, se tiene al turista que desea planificar su itinerario de viaje.
+    \item Descripción de las alternativas de decisión, se tiene al conjunto de itinerarios que se pueden realizar en un periodo de tiempo y con las restricciones oportunas. 
+    \item La determinación de los objetivos, se tiene a coste de transporte, el coste de las actividades, las preferencias del turista sobre las actividades y la diversidad que el turista desea en las actividades.
+    \item La especificación de las limitaciones, se consideran dos tipos, por una parte restricciones permanentes que son independientes de los deseos del decisor, y que deben cumplirse para que una ruta turística sea válida; y, por otra parte, restricciones propias de cada decisor a través de las cuales él mismo exige ciertas características del tour y restringe el conjunto de soluciones. Se incorporan las siguientes:\\
+    Restricciones permanentes:
+    \begin{itemize}
+        \item La restricción horaria, puesto que en un día el número de actividades que se puede realizar se encuentra limitado por el tiempo. Además de la duración de cada actividad se tiene en cuenta la distancia recorrida entre las actividades.
+        \item Se tiene en cuenta la duración máxima de transporte que quiere soportar el turista, tanto para ir de una actividad a otra, como a lo largo de todo el día.
+        \item Cada actividad se realiza en un horario determinado, y este debe respetar el horario de apertura y cierre de las actividades.
+    \end{itemize}
+    Se tiene en cuenta las preferencias propias del turista para el diseño del tour que desea realizar, respecto al tiempo de duración, los tiempos libres, el tipo de alojamiento o el tipo de visitas que quiere realizar. \\
+    Restricciones propias:
+    \begin{itemize}
+        \item Indicar los días que desea tener libres para organizarse como desee, y en estos días no se le planifican actividades.
+        \item Determinar también qué actividades quiere realizar durante el tour o los lugares que desea visitar, por tanto se fuerza su realización. Además, puede indicar en qué día desea visitar expresamente dichas actividades o lugares; o qué actividades o lugares no desea visitar a lo largo de todo el tour.
+        \item También indicar qué tipos de visitas desea realizar forzando al resto de tipos a no realizarse.
+        \item Finalmente, indicar el ritmo del tour que desea, si prefiere disfrutar de un tour relajado con un período de tiempo de descanso entre una actividad y otra o, si de lo contrario, realizar el mayor número de actividades posibles.
+    \end{itemize}
+    Según los mismos autores este el modelamiento de este problema involucra tres problemas que son: problema de asignación de asignar actividades a días, problema de rutas indicar el orden de las actividades y problema multiobjetivo a la existencia de conflictividad entre sus objetivos del decisor.
+\end{itemize}
+\subsubsection{Fase 2: Construcción del modelo}
+En esta subsección se presenta la construcción del modelo presentado por \citeA{RodriguezDiaz2012SistemaPersonalizado}:
+
+Este modelo permite seleccionar un itinerario con una serie de actividades para llevar a cabo en cada uno de los días del viaje, ordenadas en el tiempo, teniendo en cuenta las necesidades y preferencias del turista y las características del entorno.
+
+Primeramente se establece un conjunto de actividades, $j=1, 2, … M$, estas actividades están clasificadas en 3 grupos: alojamiento, restaurantes y visitas; dentro del grupo de visitas, se diferencia diferentes subtipos: museos, monumentos, playas, ocio, paseos y otras visitas; También se considera un cuarto tipo de actividad que incluye los puntos donde el viaje puede comenzar y finalizar.
+Este conjunto ordenado de actividades se representa por variable de decisión, que son variables binarias es expresado en:
+\begin{equation}
+    x_{ijt}= \begin{cases} \text{1 si va de la actividad $i$ a la actividad $j$ en el día $t$}\\ \text{0 en caso contrario} \end{cases} i,j=1,...,M; t=1,...,N
+    \label{eq:e_1}
+\end{equation}
+Definimos también variables auxiliares; se denota $y_{jt}$ a número de veces que hace la actividad $j$ en el día $t$, es decir la veces que el turista llega a la actividad $j$ desde cualquier actividad $i$ en el día $t$.
+\begin{equation}
+    y_{jt}=\sum_{i=1}^{M}x_{ijt}\; t=1,...,N; j=1,...,M\: j\neq i
+\end{equation}
+y $y_{j}$ se refiere al número de veces que el turista realiza la actividad $j$.
+\begin{equation}
+    y_{j}=\sum_{t=1}^{N}y_{jt}\; j=1,...,M
+\end{equation}
+\paragraph{Objetivos del modelo:}
+\begin{itemize}
+    \item Minimizar el coste de transporte que supone ir de una actividad a otra, este objetivo es equivalente a minimizar la distancia recorrida durante todo el tour, siendo la formulación de este objetivo la siguiente:
+    \begin{equation}
+        min \sum_{i=1}^{M}\sum_{j=1}^{M}\sum_{t=1}^{N}d_{ij}x_{ijt} \: i\neq j
+    \end{equation}
+    Donde $d_{ij}$ es la distancia de la actividad $i$ a $j$.
+    
+    \item Minimizar el coste de las actividades:
+    \begin{equation}
+        min \sum_{j=1}^{M}\sum_{t=1}^{N} c_{j}y_{jt}
+    \end{equation}
+    Donde $c_{j}$ es el costo de la actividad $j$. 
+    
+    \item Maximizar la utilidad que reportan las actividades al turista:
+    \begin{equation}
+        max\sum_{j=1}^{M}\sum_{t=1}^{N}u_{j}y_{jt}
+    \end{equation}
+    Donde la $u_{j}$ es el valor de utilidad obtenido por la actividad $j$, esta se obtiene de la relevancia propia de la actividad y de las preferencias del turista por ese tipo de actividad.
+    
+    \item Minimizar la distancia entre el tiempo de dedicación a tipo de visitas deseado $rts$ y tiempo de dedicación a tipos de visitas realizado $dts$:
+    \begin{equation}
+        min\sum_{k=1}^{6}|rts_{3k}-dts_{3k}|
+    \end{equation}
+    Donde $k$ son los tipos de visitas.
+\end{itemize}

@@ -1,30 +1,31 @@
+\begin{landscape}
 \chapter{BASES TEÓRICAS DE LA INVESTIGACIÓN}
 \section{Revisión de la literatura}
-\begin{landscape}
+{\singlespacing
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\begin{longtable}[c]{|L{2.5cm}|L{1cm}|L{2.5cm}|L{3cm}|L{8cm}|L{6cm}|}
+\begin{longtable}[c]{L{2.5cm}L{1cm}L{2.5cm}L{3cm}L{8cm}L{6cm}}
 \caption{Antecedentes de investigación}
 \label{tab:antecedentes}\\
 \hline 
-\textbf{AUTOR}& \textbf{AÑO}& \textbf{TÍTULO}& \textbf{OBJETIVOS}& \textbf{MÉTODOS}& \textbf{RESULTADOS}\\ 
+\textbf{Autor}& \textbf{Año}& \textbf{Título}& \textbf{Objetivo}& \textbf{Métodos}& \textbf{Resultados}\\ 
 \hline
 \endfirsthead
 \multicolumn{6}{c}%
-{\tablename\ \thetable\ -- \textit{Continúa de la página anterior}} \\
+{\tablename \thetable -- \textit{Continúa de la página anterior}} \\
 \hline
-\textbf{AUTOR}& \textbf{AÑO}& \textbf{TÍTULO}& \textbf{OBJETIVOS}& \textbf{MÉTODOS}& \textbf{RESULTADOS}\\ \hline
+\textbf{Autor}& \textbf{Año}& \textbf{Título}& \textbf{Objetivo}& \textbf{Métodos}& \textbf{Resultados}\\ \hline
 \endhead
 \hline \multicolumn{6}{r}{\textit{Continúa en la siguiente página}} \\
 \endfoot
 \hline
 \endlastfoot
 \citeauthor{RodriguezDiaz2012SistemaPersonalizado}&
-\citeyear{RodriguezDiaz2012SistemaPersonalizado}&
-Sistema de ayuda al turista - Modelo para la planificación de un viaje personalizado &
+\citeyearNP{RodriguezDiaz2012SistemaPersonalizado}&
+“Sistema de ayuda al turista - Modelo para la planificación de un viaje personalizado” &
 Desarrollar una herramienta que proporciona a cada turista un itinerario lo más adecuado posible a sus necesidades, que incluye las distintas actividades que puede realizar en un horario establecido.&
 Utilizó el método multicriterio, que considera la conflictividad entre sus objetivos, y tiene en cuenta sus deseos, así como las características del entorno. Los métodos para sus objetivos fueron:
-\begin{itemize}
-\item Formular el modelo matemático multiobjetivo(minimizar el coste de transporte, minimizar el  coste de las actividades, maximiza la utilidad que reportan las actividades al turista, ajustar el tiempo dedicado a cada tipo de visita durante el tour a los deseos del turista).
+\begin{itemize}[noitemsep]
+\item Formular un modelo matemático multiobjetivo(minimizar el coste de transporte, minimizar el  coste de las actividades, maximiza la utilidad que reportan las actividades al turista, ajustar el tiempo dedicado a cada tipo de visita durante el tour a los deseos del turista).
 \item Resolver el modelo matemático utilizando metaheurística Búsqueda Tabú.
 \item Recolectar los datos (localización, distancias, precio, valoración, duración en cada actividad, horario de apertura y cierre, tiempos de desplazamiento de una actividad a otra) e incorporar en una base de datos.
 \item Desarrollar una interfaz(aplicación de escritorio) para recoger información del turista(preferencias) a través de formularios, y devolver la solución óptima.
@@ -32,12 +33,12 @@ Utilizó el método multicriterio, que considera la conflictividad entre sus obj
 
 La construcción de una aplicación de escritorio de ayuda para el turista, y demostró su utilidad aplicando en un caso de Andalucía(España) donde incorporó en la base de datos un total de 2.154 atractivos turísticos(548 alojamientos, 296 establecimientos de restauración y 1.206 visitas turísticas). \\ 
 \citeauthor{Silva2018OptimizationItineraries}&
-\citeyear{Silva2018OptimizationItineraries}&
-Optimization approaches to support the planning and analysis of travel itineraries &
+\citeyearNP{Silva2018OptimizationItineraries}&
+“Optimization approaches to support the planning and analysis of travel itineraries”&
 Elaborar itinerarios de viaje teniendo en cuenta los perfiles de los visitantes, las distancias de viaje y los costos. &
 Aborda un problema de planificación de itinerarios de viaje utilizando técnicas de optimización discretas.
 Los métodos para sus objetivos fueron:
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item Formulación del modelo Problema del Tour Rentable con Premios Prioritarios(PTPPP), modelo de optimización que tiene como objetivo generar itinerarios que maximicen el valor total de las atracciones visitadas y minimicen el costo total de viaje involucrado.
 \item Para resolver el PTPPP se desarrolla un algoritmo de Búsqueda Tabú Adaptativo.
 \item Para obtener los parámetros de entrada del problema para los casos reales, se utilizan algunas técnicas estadísticas para analizar los datos recopilados, como el análisis de correspondencia multivariante.
@@ -45,12 +46,13 @@ Los métodos para sus objetivos fueron:
 Se presento resultados computacionales utilizado ejemplos reales de la ciudad de Belém(Brazil), también con ejemplos generados aleatoriamente.
 \\ 
 \citeauthor{mendoza2017diseno}&
-\citeyear{mendoza2017diseno}&
-Diseño e implementación de un circuito turístico inteligente en la Región Puno mediante la metaheurística Búsqueda Tabú &
+\citeyearNP{mendoza2017diseno}&
+“Diseño e implementación de un circuito turístico inteligente en la Región Puno mediante la metaheurística Búsqueda Tabú”&
 Diseñar e implementar un circuito turístico inteligente en la Región Puno mediante la metaheurística Búsqueda Tabú teniendo en cuenta las preferencias de los turistas &
 %Se usó el procedimiento del método de metaheurística Búsqueda Tabú. % TODO: Preguntar
+El trabajo realizado tomó el enfoque de inteligencia artificial.
 Los métodos para sus objetivos fueron:
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item Diseñar el algoritmo de heurística de construcción basada en el método el Vecino mas Cercano.
 \item Diseñar el algoritmo de heurística de mejoría basada en el Procedimiento de 2 intercambio(2-opt).
 \item Implementar el algoritmo de metaheurística Búsqueda Tabú considerando como argumentos de entrada a la solución obtenida en la heurística de mejoría.
@@ -58,83 +60,331 @@ Los métodos para sus objetivos fueron:
 \item Desarrollar una aplicación web que integre el algoritmo de Búsqueda Tabú, usando la metodología de desarrollo Agil Programación Extrema (XP), en la que se consideró también el uso de casos de uso y prototipos.
 \end{itemize} &
 Se validó el algoritmo implementado de Búsqueda Tabú con 5 instancias artificiales, con las que al comparar se logró igualar al 60\% de las mejores soluciones encontradas hasta la fecha en la literatura, y se validó también con la información de 13 emprendimientos y 7 recursos turísticos del distrito de Juli, en las que se obtuvo un ciclo hamiltoniano proponiendo un circuito turístico a medida para el turista, que inicia y termina en un mismo lugar y minimiza el costo del recorrido.
-La aplicación web se publicó en un nuevo módulo(ruta inteligente) de la plataforma desarrollada en el proyecto patrocinado por el CONCYTEC y la UPeU fifial Juliaca "Plataforma digital inteligente y Big Data para el turismo rural comunitario en la Región Puno". La aplicación permite que la preferencias puedan ser editadas, eligiendo priorizar entre el costo, distancia y tiempo.
+La aplicación web se publicó en un nuevo módulo(ruta inteligente) de la plataforma desarrollada en el proyecto patrocinado por el CONCYTEC y la UPeU filial Juliaca "Plataforma digital inteligente y Big Data para el turismo rural comunitario en la Región Puno". La aplicación permite que la preferencias puedan ser editadas, eligiendo priorizar entre el costo, distancia y tiempo.
 Se encontró inconvenientes al acceso a la información actualizada y completa del inventario de los recursos turísticos del Ministerio de Comercio Exterior y Turismo.
 \\ 
 \citeauthor{Sylejmani2011SolvingApproach}&
-\citeyear{Sylejmani2011SolvingApproach}&
-Solving touristic trip planning problem by using taboo search approach &
+\citeyearNP{Sylejmani2011SolvingApproach}&
+“Solving touristic trip planning problem by using taboo search approach”&
 Presentar un algoritmo que planifica automáticamente un viaje turístico considerando algunas restricciones duras y suaves. Las horas de apertura y cierre de los PDI(Puntos de interés), la duración del viaje y el presupuesto asignado al viaje representan las restricciones duras, mientras que los factores de satisfacción de los PDI y la distancia de viaje en el viaje se consideran restricciones suaves.%TODO: Corregir que el objetivo, poner del trabajo no de la redaccion 
 &
 Métodos por objetivos:
-\begin{itemize}
-\item Formular como problema matemático, como una versión de "Orienteering Problem with Time Windows (OPTW)" traducido como Problema de orientación con ventanas de tiempo. %TODO: Poner como lo hace(cuales son su objetivos de sus funciones)
+\begin{itemize}[noitemsep]
+\item Formular como problema matemático, como una versión de “Orienteering Problem with Time Windows (OPTW)” traducido como Problema de orientación con ventanas de tiempo. %TODO: Poner como lo hace(cuales son su objetivos de sus funciones)
 \item Desarrollar el algoritmo utilizando el método de búsqueda tabú, en el lenguaje de programación Java, y para describir el algoritmo se usa pseudocódigo.
 \item Validar con instancias de perfiles de turistas y instancias de la ciudad de Viena(Austria).
 \end{itemize} &
 El algoritmo se prueba con 10 instancias de perfiles de turistas y 40 instancias de PDIs de la ciudad de Viena. %TODO: Aumentar mas resultados
 \\ 
 \citeauthor{Beirigo2016AProblem}&
-\citeyear{Beirigo2016AProblem}&
-A parallel heuristic for the travel planning problem &
+\citeyearNP{Beirigo2016AProblem}&
+“A parallel heuristic for the travel planning problem”&
 Es encontrar una ruta que produzca un itinerario de viaje económico, que incluya vuelos en avión, hoteles, estadías en cada destino y horarios de salida/llegada. &
 Utiliza el método de una heurística de Búsqueda Local Iterada(ILS) paralela para buscar rutas candidatas prometedoras en una red de viajes realista.
 Los objetivos y los métodos son:
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item Describir todos los datos de viaje necesarios para implementar el método de optimización, así como las preferencias del viajero que guían el proceso de toma de decisiones.%(destinos, ventana de tiempo de viaje, transporte, hoteles, tiempos de espera, tiempo de permanencia)
-\item Formula el modelo del problema, que representa un problema de ruta más corta dependiente del tiempo(TDSPP, por sus siglas en inglés).
+\item Formular el modelo del problema, que representa un problema de ruta más corta dependiente del tiempo(TDSPP, por sus siglas en inglés).
 \item Implementa el método exacto y el enfoque de heurísticas con Búsqueda Local Iterada(ILS) en la cual usa para el método de Greedy solución inicial(crear la ruta), el método de Búsqueda local 2-0pt, Doble perturbación puente(4-Opts), lista de memoria, paralelización, construcción de gráficos de viajes paralelos, paralelo 2-0pt y doble puente paralelo.
-\item Compara la calidad  de los resultados del método exacto con el enfoque heurístico(considerando también algunas versiones diferentes), para lo cual utiliza la métrica de Desviación de porcentaje relativo(RPD).
+\item Comparar la calidad  de los resultados del método exacto con el enfoque heurístico(considerando también algunas versiones diferentes), para lo cual utiliza la métrica de Desviación de porcentaje relativo(RPD).
 \end{itemize} &
 Los resultados son experimentales en 285 instancias, que toma en promedio hasta 3 minutos para alcanzar soluciones en promedio menos del 3\% divergentes de una implementación exacta. Además, el método alcanza la solución óptima en aproximadamente el 30\% de los casos de prueba.
 \\ 
 
 \end{longtable}
-Fuente: Elaboración propia
+}
 \end{landscape}
 %Parrafo donde diga en resumen de que tesis usare que partes y que partes ignorare...
 %TODO: Indagar con otras investigaciones, considerar resumir el enfoque y que cosas son las limitaciones... Sugerencia, hablar del articulo de revisión(A survey...), se podría hablar de cada parte, por ejemplo el método, las formas de evaluar, siempre usando referencias.
 
+% Objetivos:
+% Mostrar los metodos existentes para solucionar el problema y comparar, (Poner porque se eligio tal)
+% Detallar el elegido
+%   Caracteristicas
+%   
 \section{Marco Teórico}
+% TODO: Agregar introducción (resumen de como se pretende mostrar)
 \subsection{Investigación de operaciones}
-\subsubsection{Metodología}
+La investigación operativa es una rama de las matemáticas que se ocupa de la aplicación de métodos científicos en la mejora de efectividad en las operaciones, decisiones y gestión \cite{Ramos2010ModelosOptimizacion}. 
+\begin{quote}La investigación de operaciones utiliza como recurso primario, modelos matemáticos para cuantificar y acotar los problemas dentro de un marco de restricciones, medidas, objetivos y variables, de tal manera que se obtengan controles óptimos de operación, decisiones, niveles y soluciones. El procedimiento consiste en la construcción de un modelo de decisión y posteriormente encontrar su solución con el objeto de determinar la decisión óptima. \cite{RinconAbril2001InvestigacionEmpresas} \end{quote}
+
+\begin{quote}La investigación de operaciones puede ser utilizado para asistir en los procesos de toma de decisiones relativas a los diferentes problemas de la vida real. Existen diversos problemas de la vida real para cuya resolución es posible aplicar metodologías de la investigación de operaciones, generalmente se busca mejorar un aspecto cuantificable, donde la mejora va estar dada por la toma de una decisión, y esa decisión pertenece a un conjunto de soluciones que es extenso a la vez complejo.\cite{Mauttone2014QueYouTube}\end{quote}
+\subsubsection{Metodología de investigación de operaciones}
+Llamada también fases de la investigación de operaciones, existen algunas pequeñas diferencias de acuerdo a los autores, en esta investigación se considerará según  \citeA{Taha2004InvestigacionOperaciones}. \cite{CabreraGarcia2013IntroduccionYouTube,Hillier2010IntroduccionOperaciones, Williams2013ModelProgramming}
+
+\paragraph{Definición y formulación del problema}
+El resultado final es identificar tres elementos principales del problema de decisión, que son los siguientes según \citeA{Taha2004InvestigacionOperaciones}: 
+\begin{itemize}[noitemsep]
+    \item Responsables de la decisión.
+    \item La descripción de las alternativas de decisión, aspectos del sistema que puede ser controlado o manipulado por quien toma la decisión.
+    \item La determinación de los objetivos.
+    \item La especificación de las limitaciones o condiciones formado por todo los aspectos que no se controlan(demanda, precios, recursos disponibles, etc.).
+\end{itemize}
+\paragraph{Construcción del modelo matemático}
+La construcción del modelo implica traducir la definición del problema a una construcción formal del modelo matemático, descritos en variables, funciones, ecuaciones y desigualdades. Los componentes del resultado final son \cite{CabreraGarcia2013IntroduccionYouTube}:
+\begin{itemize}[noitemsep]
+    \item Variables
+    \item Parámetros
+    \item Restricciones
+    \item Función objetivo
+\end{itemize}
+\paragraph{Obtención de la solución al modelo}
+Se desarrolla un procedimiento para dar solución al modelo matemático formulado del problema en estudio, para lo cual se tiene que elegir la técnica y desarrollarla. En las técnicas que existen en investigaciones de operaciones se presentan agrupadas en la Tabla \ref{tab:metodosio} según \citeA{Rao2009EngineeringPractice}, ya que estos son bastantes y de acuerdo a esta investigación se tomará el enfoque de optimización lo cual se describe posteriormente.  
+
+\begin{table}[ht]
+\caption{Grupo de métodos de investigación de operaciones}
+\label{tab:metodosio}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{tabular}{L{5cm}L{11cm}} \hline
+\textbf{Grupo} &\textbf{Descripción}\\ \hline
+Programación matemática o técnicas de optimización & Son útiles para encontrar el mínimo o máximo de una función de varias variables bajo un conjunto prescrito de restricciones.\\
+Técnicas de procesos estocásticos & Se pueden usar para analizar los problemas descritos por un conjunto de variables aleatorias que tienen distribuciones de probabilidad conocidas.\\
+Técnicas estadísticas & Permiten analizar los datos experimentales y construir modelos empíricos para obtener la representación más precisa de la situación física. \\
+\textit{Técnicas de optimización modernas o no tradicionales} & Se han convertido en métodos poderosos y populares para resolver problemas complejos de optimización de ingeniería en los últimos años.\\
+\hline
+\end{tabular}
+%Nota: Elaboración propia en base a \citeA{Rao2009EngineeringPractice}.
+%{\small\textit{Note}. The caption should now be correctly formatted.}
+\end{table}
+En esta investigación se entiende que la solución de un problema de decisión está dada al elegir lo bueno o mejor entre un conjunto de alternativas, donde se asume la existencia de ciertos criterios (objetivos), según los cuales la calidad de las alternativas es medida. \cite{Ehrgott2005MulticriteriaOptimization}
+\paragraph{Validación de la solución}
+Se valida el modelo y la solución al observar los posibles errores que pueden estar en la omisión de variables, relación entre variables (restricciones), incorrecta modelización, parámetros inconvenientes o mal estimados. y para conocer la estabilidad se hace uso de la técnica de análisis de sensibilidad. \cite{CabreraGarcia2013IntroduccionYouTube}
+
+Desde el lado formal, un método frecuente para comprobar la validez de un modelo es comparar su resultado con datos históricos. El modelo es válido si, bajo condiciones de datos semejantes, reproduce el funcionamiento en el pasado. Sin embargo, en general no hay seguridad de que el funcionamiento en el futuro continúe reproduciendo los datos del pasado. También, como el modelo se suele basar en un examen cuidadoso de los datos históricos, la comparación propuesta debería ser favorable. Si el modelo propuesto representa un sistema nuevo, no existente, no habrá datos históricos para las comparaciones. En esos casos se podrá recurrir a una simulación, como herramienta independiente para verificar los resultados del modelo matemático. \cite{Taha2004InvestigacionOperaciones}
+
+\paragraph{Implementación de resultados}
+La implementación de la solución de un modelo validado implica la traducción de los resultados a instrucciones de operación para que pueda ser aplicada. También se debe tener el control de la condiciones para adaptar el modelo cuando sea necesario. \cite{CabreraGarcia2013IntroduccionYouTube}
+
+\subsection{Optimización}
+La optimización también es conocida como programación matemática, es una disciplina matemática que se ocupa de encontrar extremos óptimos sean máximos o mínimos de funciones \cite{Collette2003MultiobjectiveStudies}. Los métodos de optimización son utilizados para resolver problemas cuantitativos en muchas disciplinas, incluyendo física, biología, ingeniería, economía y negocios \cite{WrightOptimizationMathematics}. Las técnicas de optimización son considerados parte de un grupo de métodos de investigación de operaciones según \citeA{Rao2009EngineeringPractice}.
+
+No hay un método único disponible para resolver todos los problemas de optimización de manera eficiente. Por lo tanto, se han desarrollado varios métodos de optimización para resolver diferentes tipos de problemas de optimización. \cite{Rao2009EngineeringPractice}
+
+La clasificación de la optimización no esta bien establecida según \citeA{Yang2010EngineeringApplications} en la cual da un acercamiento y hace de acuerdo a algunos criterios como se muestra en la Figura \ref{fig:clasificaionoptimizacion}
+
+\begin{figure}
+\centering
+\begin{displaymath}
+    \text{Optimización}
+    \begin{cases}
+        \text{Objetivos}& 
+            \begin{cases}
+                \text{Mono-objetivo}\\
+                \text{Multi-objetivo}
+            \end{cases}
+        \\
+        \text{Restricciones}& 
+            \begin{cases}
+                \text{Sin restricciones}\\
+                \text{Con restricciones}
+            \end{cases}
+        \\
+        \text{Modalidad}& 
+            \begin{cases}
+                \text{Unimodal(convexo)}\\
+                \text{Multimodal}
+            \end{cases}
+        \\
+        \text{Forma de la función}& 
+            \begin{cases}
+                \text{Lineal}\\
+                \text{No lineal}& 
+                    \begin{cases}
+                        \text{Cuadrático}\\
+                        \text{...}
+                    \end{cases}
+            \end{cases}
+        \\
+        \text{Variables}& 
+            \begin{cases}
+                \text{Discreta}& 
+                    \begin{cases}
+                        \text{Entero}\\
+                        \text{...}
+                    \end{cases}
+                \\
+                \text{Continua}\\
+                \text{Mixto}\\
+                \text{Combinatoria(*)}
+            \end{cases}
+        \\
+        \text{Determinación}& 
+            \begin{cases}
+                \text{Determinista}\\
+                \text{Estocástico}
+            \end{cases}
+    \end{cases}
+\end{displaymath}
+\label{fig:clasificaionoptimizacion}
+\caption{Clasificación de problemas de optimización}
+Fuente: Extraído de \citeA{Yang2010EngineeringApplications} con una modificación considerado de \citeA{Collette2003MultiobjectiveStudies} en (*).
+\end{figure}
+
+%\begin{table}[ht]
+%\centering
+%\caption{Optimización clásica vs. metaheurísticos}
+%\label{tab:optimizacionclasicavs}
+%\begin{tabular}{ll} \hline
+%\textbf{Métodos clásicos} &\textbf{Métodos metaheurísticos}\\ \hline
+%Buscan el óptimo localmente & Imitan fenómenos sencillos observados en la naturaleza \\
+%Garantizan el óptimo numérico & Buscan óptimos globales, con mecanismos para evita óptimos locales \\
+%Permiten un elevado número de restricciones & No garantizan la obtención del óptimo \\
+%& No permiten elevado número de restricciones \\
+%& Exploran gran número de soluciones en tiempo muy corto \\
+%& Aplicados principalmente a problemas combinatoriales \\
+%\hline
+%\end{tabular}
+%\end{table}
+A continuación se describirán algunos conceptos de las técnicas de optimización relacionadas con este trabajo de investigación. 
+
+%Tipo o tecnica
+\subsubsection{Optimización multi-objetivo}
+%Es un error común en la práctica que la mayoría de las actividades de diseño o resolución de problemas deben estar orientadas a optimizar un solo objetivo, por ejemplo, obtener el máximo beneficio o causar el menor costo, aunque pueden existir diferentes objetivos en conflicto para la tarea de optimización. Como resultado, los diferentes objetivos a menudo se redefinen para proporcionar un costo equivalente o un valor de ganancia, reduciendo así artificialmente el número de objetivos aparentemente conflictivos en un solo objetivo. Sin embargo, la correlación entre los objetivos suele ser bastante compleja y depende de las alternativas disponibles. Además, los diferentes objetivos son típicamente no conmensurables, por lo que es difícil agruparlos en un objetivo sintético.
+
+%Los problemas de optimización multicriterio que hemos discutido hasta ahora tenían un conjunto factible continuo descrito por restricciones. En los capítulos restantes del libro nos ocuparemos de problemas discretos, en los que el conjunto factible es un conjunto finito. Estos son conocidos como problemas de optimización combinatoria y discretos multiobjetivos. Surgen naturalmente en muchas aplicaciones, como veremos en el Ejemplo 8.1 a continuación, cuando las variables se usan para modelar decisiones de sí / no u objetos que no son divisibles. En muchos casos, tales problemas pueden entenderse como problemas de optimización en alguna estructura combinatoria.
+
+%Los problemas de optimización combinatoria tienen un conjunto finito de soluciones factibles. Esto tiene un impacto significativo en la forma en que abordamos estos problemas, tanto en la teoría como en las técnicas de solución. Primero introduciremos los problemas de optimización combinatoria y las clases de optimización multicriterio que consideraremos en los siguientes capítulos. Algunas observaciones básicas muestran que, en un contexto multicriterio, la optimización combinatoria es bastante diferente del marco de optimización general o lineal que hemos considerado en capítulos anteriores de este texto. En particular, proporcionamos una breve introducción a los conceptos de complejidad computacional, como la integridad de PN y la integridad de #P. En los siguientes capítulos probamos los resultados en complejidad computacional. Estos capítulos presentan algunos problemas combinatorios seleccionados, que se eligen para ilustrar una o más estrategias de solución. De este modo, el lector puede adquirir una descripción general de las técnicas disponibles para la optimización combinatoria de múltiples criterios. Para una encuesta más amplia del campo, nos referimos a las bibliografías recientes Ehrgott y Gandibleux (2000) y Ehrgott y Gandibleux (2002a)
+
+%Soluciones extremas e soportadas. Presentemos ahora las definiciones principales para tratar la complejidad computacional de los problemas de optimización combinatoria multiobjetivo. Esta descripción es un resumen muy breve e informal. Para una introducción en profundidad a la complejidad computacional, nos referimos a Garey y Johnson (1979). La complejidad de la computación es una teoría de "cuán difícil" es responder un problema de decisión PD, donde un problema de decisión es una pregunta que tiene una respuesta de sí o no. Esta dificultad se mide por el número de operaciones que necesita un algoritmo para encontrar la respuesta correcta al problema de decisión en el peor de los casos. Para ello utilizamos la notación “bigO”. En esta notación, el tiempo de ejecución de un algoritmo esO (g (n)) si hay una constante c, de manera que el número de operaciones realizadas por el algoritmo sea menor o igual que tocg (n) para todas las instancias del problema de decisión, dónde está alguna función y n es el tamaño de la instancia. ... \cite{Ehrgott2005MulticriteriaOptimization}
+
+La principal dificultad que encontramos en la optimización mono-objetivo proviene del hecho de que modelar un problema con una sola ecuación puede ser una tarea muy difícil. El objetivo de modelar el problema usando solo una ecuación puede introducir un sesgo durante la fase de modelado. La optimización multi-objetivo permite un grado de libertad que carece de optimización mono-objetivo. Esta flexibilidad no deja de tener consecuencias para el método utilizado para encontrar un óptimo para el problema cuando finalmente se modela. La búsqueda no nos dará una solución única, sino un conjunto de soluciones. Estas soluciones se denominan soluciones de Pareto, y el conjunto de soluciones que encontramos al final de la búsqueda se denomina superficie de compensación. Después de haber encontrado algunas soluciones del problema de optimización multi-objetivo, nos encontramos con algunas dificultades: debemos seleccionar una solución de este conjunto. La solución seleccionada por el usuario reflejará las compensaciones realizadas por el usuario con respecto a las diversas funciones objetivas. El que toma las decisiones es "humano"; él/ella tomará decisiones, y uno de los objetivos de la optimización multi-objetivo es modelar las opciones del tomador de decisiones, o más bien, sus preferencias. \cite{Collette2003MultiobjectiveStudies}
+%Para modelar estas elecciones, podemos aplicar dos teorías generales: • teoría de la utilidad de atributos múltiples (ver [Keeney et al. 93]); • teoría de ayuda a la decisión multicriterio (ver [Roy et al. 93]). Estas dos teorías tienen enfoques diferentes. El primer enfoque modela las preferencias del tomador de decisiones, postulando que, implícitamente, cada tomador de decisiones intentará maximizar una función llamada función de utilidad. Este enfoque no acepta, al final de la fase de selección, ninguna solución de rangos iguales. %\cite{Collette2003MultiobjectiveStudies}
 \subsubsection{Optimización combinatoria}
-\paragraph{Optimización multiobjetivo}
- 
+Se define como “La optimización combinatoria es el estudio matemático de la búsqueda de una disposición óptima, agrupación, ordenación o selección de objetos discretos, generalmente de números finitos.” \cite{Lawler1976CombinatorialMatroids}
+
+%\subsection{Complejidad de los problemas}
+%\subsubsection{Clases de complejidad}
+%\subsection{Métodos de resolución}
+% Clasifiación de tecnicas de búsqueda
+%\subsubsection{Exactos}
+%\subsubsection{Aproximados}
+
 \subsection{Inteligencia Artificial}
-\subsubsection{Algoritmos de búsqueda}
+Definido por John McCarthy en 1956 como “La ciencia y la ingeniería de hacer máquinas inteligentes, especialmente programas de computo inteligentes” \cite{ArtificialOverview}. También se puede definir como la rama de la ciencia de la computación que se ocupa de la automatización del comportamiento inteligente \cite{Luger2009ArtificialSolving}. 
+
+La investigación en inteligencia artificial (IA) se ha centrado principalmente en los siguientes componentes de la inteligencia según \cite{Copeland2018ArtificialIntelligence,ArtificialOverview}:
+\begin{itemize}[noitemsep]
+    \item Aprendizaje
+    \item Razonamiento
+    \item Resolución de problemas
+    \item Percepción
+    \item Uso del lenguaje
+\end{itemize}
+La resolución de problemas, particularmente en inteligencia artificial, puede caracterizarse como una búsqueda sistemática a través de un rango de posibles acciones para alcanzar una meta o solución predefinida \cite{Copeland2018ArtificialIntelligence}.
+
+\subsubsection{Búsqueda en inteligencia artificial}
+Se puede decir que casi todos los programas de inteligencia artificial están realizando algún tipo de solución de problemas, ya sea interpretando una escena visual, analizando una oración o planificando una secuencia de acciones de robots. La búsqueda es uno de los problemas centrales en los sistemas de resolución de problemas. Se vuelve así cada vez que el sistema, a través de la falta de conocimiento, se enfrenta a una elección de una serie de alternativas, donde cada elección lleva a la necesidad de realizar más elecciones, y así sucesivamente hasta que se resuelva el problema \cite{Thornton1992ArtificialSearch}. 
+%Jugar al ajedrez es un ejemplo clásico de esta situación. Otros ejemplos incluyen el intento de diagnosticar una falla de funcionamiento en alguna pieza compleja de maquinaria o determinar la mejor manera de cortar el material para hacer una prenda de vestir con el mínimo de desperdicio. Así, interpretar una escena visual y analizar una oración puede considerarse como una búsqueda plausible de datos visuales o auditivos posiblemente ambiguos, y hacer un plan puede considerarse como una búsqueda en un espacio de planes para encontrar una que sea internamente coherente y que logre los objetivos dados. 
+
+Cuando el número de posibilidades es pequeño, el programa puede realizar un análisis exhaustivo de todas ellas y luego elegir las mejores. En general, sin embargo, los métodos exhaustivos no serán posibles y se deberá tomar una decisión en cada punto de elección para examinar solo un número limitado de las alternativas más prometedoras. En el ajedrez, por ejemplo, hay demasiadas posibilidades para que un programa (o una persona) imagine cada movimiento posible, cada una de las posibles respuestas correspondientes, movimientos adicionales en respuesta y así sucesivamente a la conclusión anticipada del juego. Pero decidir lo que cuenta como “prometedor” a veces es muy difícil. Un buen jugador de ajedrez es bueno precisamente porque, entre otras habilidades, él o ella tiene buen ojo para encontrar formas plausibles de proceder y puede concentrarse en ellas. Si bien es fácil diseñar programas de resolución de problemas que sean buenos para realizar un seguimiento de las elecciones realizadas y las que aún no se han explorado, es difícil proporcionar un programa con el sentido común que pueda atravesar un abanico de posibilidades para concentrar su principal Análisis sobre el pequeño número de elecciones críticas \cite{Thornton1992ArtificialSearch}.
+
+%Search strategies
+%A strategy is defined by picking the order of node expansion
+%Strategies are evaluated along the following dimensions:
+%completeness—does it always find a solution if one exists?
+%optimality—does it always find a least-cost solution?
+%time complexity—number of nodes generated/expanded
+%space complexity—maximum number of nodes in memory
+%Time and space complexity are measured in terms of
+%b—maximum branching factor of the search tree
+%d—depth of the least-cost solution
+%m—maximum depth of the state space (may be ∞)
+%Algunos problemas que a primera vista requieren una solución basada en la búsqueda a ciegas, por ejemplo, el cubo de Rubik, resultan en un estudio adicional para que sean parcialmente solubles mediante métodos de propósito especial que son esencialmente de carácter determinista. El grado de búsqueda necesario para la solución de otros problemas, como el problema del vendedor ambulante (es decir, la determinación de la ruta circular más corta que une un conjunto determinado de ciudades para que cada ciudad sea visitada una sola vez), también puede reducirse enormemente mediante Métodos y relajando algunas restricciones en el problema, por ejemplo, que se encuentre una solución "aceptable" en lugar de la "mejor" solución.\cite{Thornton1992ArtificialSearch}
+
+%Existe una tensión en la inteligencia artificial entre la investigación de métodos de propósito general que pueden aplicarse a través de dominios y el descubrimiento y explotación de conocimientos especiales, heurísticas, trucos y atajos que pueden aplicarse en dominios particulares para mejorar el rendimiento. Este libro se ocupa en gran medida de los métodos de propósito general. Sin embargo, se debe tener en cuenta que estos métodos de propósito general a menudo proporcionan el marco al que se puede adjuntar el conocimiento específico de dominio disponible.
+%En muchos sentidos, los solucionadores de problemas a los que se hace referencia aquí son fácilmente superados en rendimiento por humanos expertos. Pero este es el estado de juego en la actualidad. Lo que Amnistía Internacional ha hecho es enfatizar que incluso las tareas empobrecidas, como encontrar un camino utilizando un mapa o planificar cómo construir un objeto simple, ocultan una gran cantidad de problemas que desmienten nuestra capacidad humana aparentemente sin esfuerzo para tener éxito en tales tareas. \cite{Thornton1992ArtificialSearch}
 \paragraph{Búsqueda no informada}
+También llamada búsqueda ciega, este tipo de búsquedas no tienen información adicional acerca de los estados más allá de la que proporciona la definición del problema. Esto significa que no utiliza ninguna información que lo ayude a alcanzar la meta, como la cercanía o la ubicación de la misma . Las estrategias o algoritmos, utilizando esta forma de búsqueda, ignoran a dónde van hasta que encuentran una meta y reportan el éxito. Es una clase de algoritmos de búsqueda de propósito general que operan de manera bruta \cite{Russell2004InteligenciaArtificial,SearchIntelligence,2018SearchTechniques}.
 \paragraph{Búsqueda informada}
+Este tipo de búsqueda utiliza la información del problema y el costo del estado actual al objetivo. Generalmente utiliza una función heurística que estima qué tan cerca está un estado del objetivo. Esta heurística no necesita ser perfecta. Esta función se utiliza para estimar el costo de un estado al objetivo más cercano \cite{SearchIntelligence}.
 
 \subsection{Problemas relacionados}
 \subsubsection{El Problema del Viajante de Comercio (TSP)}
+Llamado también el Problema del Vendedor Ambulante (TSP) es uno de los problemas más estudiados en matemática computacional y optimización combinatoria. Se considera en la clase de problemas de optimización combinatoria como NP-completo. Por literatura, se han lanzado muchos algoritmos y enfoques para resolver tales TSP. Sin embargo, no hay algoritmos actuales que puedan proporcionar la solución exactamente óptima del problema TSP disponible. \cite{SuwannarongsriSolvingTechniques} 
 
-\subsubsection{Problema de diseño de viaje turístico(TTDP)}
-\subsubsection{Planificación inteligente de viajes(ITP)}
+%En las técnicas de búsqueda de IA para resolver el problema TSP están los algoritmos genéticos (GA), búsqueda de tabú (TS), algoritmos evolutivos,...
+
+%https://www.uaeh.edu.mx/scige/boletin/tlahuelilpan/n3/e5.html
+
+% Podria ser bueno quizá poner la relacion la apliacion en turismo
+%\subsubsection{Problema de diseño de viaje turístico(TTDP)}
+%\subsubsection{Planificación inteligente de viajes(ITP)}
 %\subsubsection{Problema multiobjetivo}
-\subsubsection{Problema de asignación}
-
-\subsection{Complejidad de los problemas}
-\subsubsection{Clases de complejidad}
-
-\subsection{Métodos de resolución}
-\subsubsection{Exactos}
-\subsubsection{Aproximados}
+%\subsubsection{Problema de asignación}
 
 \subsection{Heurísticas}  % se está subiendo el nivel por que es donde también se hablará bastante
-\subsubsection{Heurísticas de construcción}
-\subsubsection{Heurísticas de mejora}
+\begin{quote}Se califica de heurístico a un procedimiento para el que se tiene un alto grado de confianza en que encuentra soluciones de alta calidad con un coste computacional razonable, aunque no se garantice su optimalidad o su factibilidad, e incluso, en algunos casos, no se llegue a establecer lo cerca que se está de dicha situación. Se usa el calificativo heurístico en contraposición a exacto...(Melián, Belén. Perez, Jose A. et al) \cite{RiojasCanari2005BusquedaN-reinas}\end{quote}
+
+Entre la clasificación de los heurísticos mas conocidos solo se mencionarán a los que tengan que ver con este trabajo, según \citeA{MartiProcedimientosCombinatoria}.
+\subsubsection{Métodos constructivos}
+\begin{quote}Los métodos constructivos son procedimientos iterativos que, en cada paso, añaden un elemento hasta completar una solución. Usualmente son métodos deterministas y están basados en seleccionar, en cada iteración, el elemento con mejor evaluación. Estos métodos son muy dependientes del problema que resuelven,... \cite{MartiProcedimientosCombinatoria}\end{quote}
+\paragraph{Heurística del Vecino más Próximo}
+“Uno de los heurísticos más sencillos para el problema del agente viajero, que trata de construir un ciclo Hamiltoniano de bajo coste basándose en el vértice cercano a uno dado.” \cite{MartiProcedimientosCombinatoria}
+
+Su pseudocódigo, en una versión standard, es el siguiente:
+\\Algoritmo del Vecino más Próximo \\
+\textit{
+Inicialización \\
+\hspace{10mm}Seleccionar un vértice j al azar. \\
+\hspace{10mm}Hacer $t = j$ y $W = V \setminus \left \{ j \right \}$\\
+Mientras $W\neq0$ \\
+\hspace{10mm}Tomar $j\in W/c_{tj}=min\left \{ c_{ti} /i\in W \right \}$ \\
+\hspace{10mm}Conectar $t$ a $j$ \\
+\hspace{10mm}Hacer $W = W \setminus \left \{ j \right \}$ y $t=j$ \\
+}
+\begin{quote}Este procedimiento realiza un número de operaciones de orden $O(n^{2})$. Si seguimos la evolución del algoritmo al construir la solución de un ejemplo dado, veremos que comienza muy bien, seleccionando aristas de bajo coste. Sin embargo, al final del proceso probablemente quedarán vértices cuya conexión obligará a introducir aristas de coste elevado. Esto es lo que se conoce como miopía del procedimiento, ya que, en una iteración escoge la mejor opción disponible sin ‘ver’ que esto puede obligar a realizar malas elecciones en iteraciones posteriores.\cite{MartiProcedimientosCombinatoria}\end{quote}
+\subsubsection{Métodos de búsqueda local}
+“También llamados de mejora, se basan en explorar el entorno o vecindad de una solución. Utilizan una operación básica llamada movimiento que, aplicada sobre los diferentes elementos de una solución, proporciona las soluciones de su entorno.” \cite{MartiProcedimientosCombinatoria}
+
+\paragraph{Procedimiento de 2 intercambio}
+\begin{quote}Este procedimiento está basado en la siguiente observación para grafos con distancias euclídeas (o en general con costes cumpliendo la desigual-dad triangular). Si un ciclo Hamiltoniano se cruza así mismo, puede ser fácilmente acortado, basta con eliminar las dos aristas que se cruzan y re-conectar los dos caminos resultantes mediante aristas que no se corten. El ciclo final es más corto que el inicial. Un movimiento 2-opt consiste en eliminar dos aristas y reconectar los dos caminos resultantes de una manera diferente para obtener un nuevo ciclo. \cite{MartiProcedimientosCombinatoria}\end{quote}
 
 \subsection{Metaheurísticas}
-\subsubsection{Búsqueda tabú}
+La aparición de un nuevo tipo de método, llamado metaheurística se han desarrollado desde 1980 con un objetivo común: resolver problemas difíciles de optimización de la mejor manera posible \cite{Collette2003MultiobjectiveStudies}. Tienen en común, además, las siguientes características:
+\begin{itemize}[noitemsep]
+    \item Son, al menos en parte, estocásticas: este enfoque puede manejar la explosión combinatoria de posibilidades. 
+    \item Sus orígenes son combinatorios: tienen la ventaja, crucial en el caso continuo, de ser directos, lo que significa que no necesitan computar los derivados de la función objetivo.
+    \item Están inspirados en analogías: con la física (recocido simulado, difusión simulada, etc.), con la biología (algoritmos genéticos, búsqueda de tabú, etc.) o con la etología (colonias de hormigas y métodos de enjambre de partículas, etc.). 
+    \item Pueden guiar, en una tarea particular, otro método de búsqueda especializado (por ejemplo, otro método heurístico o de exploración local). 
+    \item Comparten los mismos inconvenientes: dificultades para ajustar los parámetros del método y el alto tiempo de cálculo. 
+\end{itemize}
+Se define como:
+\begin{quote}(Osman y Kelly,1995) Los procedimientos Metaheurísticos son una clase de métodos aproximados que están diseñados para resolver problemas difíciles de optimización combinatoria, en los que los heurísticos clásicos no son efectivos. Los Metaheurísticos proporcionan un marco general para crear nuevos algoritmos híbridos combinando diferentes conceptos derivados de la inteligencia artificial, la evolución biológica y los mecanismos estadísticos. \cite{MartiProcedimientosCombinatoria}\end{quote}
 
-\subsection{Python}
+\subsection{Búsqueda tabú}
+Según Glover, su primer definidor, la búsqueda tabú guía un procedimiento de búsqueda local para explorar el espacio de soluciones más allá del óptimo local \cite{RiojasCanari2005BusquedaN-reinas}. 
+Se tiene también que:
+\begin{quote}Búsqueda tabú es una técnica para resolver problemas combinatorios de gran dificultad que está basada en principios generales de Inteligencia Artificial. En esencia es un metaheurística que puede ser utilizado para guiar cualquier procedimiento de búsqueda local en la búsqueda agresiva del óptimo del problema. Por agresiva nos referimos a la estrategia de evitar que la búsqueda quede atrapada en un óptimo local que no sea global. A tal efecto, búsqueda tabú toma de la IA el concepto de memoria y lo implementa mediante estructuras simples con el objetivo de dirigir la búsqueda teniendo en cuenta la historia de ésta. Es decir, el procedimiento trata de extraer información de lo sucedido y actuar en consecuencia. En este sentido puede decirse que hay un cierto aprendizaje y que la búsqueda es inteligente. \cite{MartiProcedimientosCombinatoria}\end{quote}
+\subsubsection{Tabus}
+Se utilizan para evitar los ciclos cuando se aleja de los óptimos locales mediante movimientos que no mejoran. La realización clave aquí es que, cuando se produce esta situación, se debe hacer algo para evitar que la búsqueda rastree sus pasos hasta el lugar de donde provino. Esto se logra al declarar movimientos tabú (no permitidos) que revierten el efecto de movimientos recientes. Los tabus también son útiles para ayudar a que la búsqueda se aleje de las partes visitadas anteriormente del espacio de búsqueda y, por lo tanto, realice una exploración más extensa. Los tabus se almacenan en una memoria a corto plazo de la búsqueda (la lista de tabu) y generalmente solo se registra una cantidad de información fija y bastante limitada. En cualquier contexto dado, hay varias posibilidades con respecto a la información específica que se registra. Uno podría registrar soluciones completas, pero esto requiere mucho almacenamiento y hace que sea costoso verificar si un movimiento potencial es tabú o no; Por lo tanto, rara vez se utiliza. El tabus más comúnmente utilizado implica registrar las últimas transformaciones realizadas en la solución actual y prohibir las transformaciones inversas (como en el ejemplo anterior); Otros se basan en características clave de las soluciones mismas o de los movimientos. \cite{2010HandbookMetaheuristics}
+\subsubsection{Criterio de aspiración}
+Si bien son fundamentales para el búsqueda tabú, los tabus son a veces demasiado poderosos: pueden prohibir movimientos atractivos, incluso cuando no existe peligro de ciclismo, o pueden llevar a un estancamiento general del proceso de búsqueda. Por lo tanto, es necesario utilizar dispositivos algorítmicos que permitan revocar (cancelar) tabus. Estos se llaman criterios de aspiración. El criterio de aspiración más simple y más comúnmente utilizado, que se encuentra en casi todas las implementaciones de búsqueda tabú, consiste en permitir un movimiento, incluso si es tabú, si resulta en una solución con un valor objetivo mejor que el de la solución más conocida actual(ya que la nueva solución obviamente no ha sido visitada previamente). Se han propuesto criterios de aspiración mucho más complicados y se han implementado con éxito, pero rara vez se utilizan. La regla clave a este respecto es que si el ciclo no puede ocurrir, tabus puede ser ignorado. \cite{2010HandbookMetaheuristics}
+
+Se mencionará algunas características de búsqueda tabú según \cite{RiojasCanari2005BusquedaN-reinas}:
+\subsubsection{Uso de memoria}
+\paragraph{Corto plazo}
+\begin{quote}Almacena soluciones o atributos de soluciones recientemente visitadas para evitar los ciclos. Las soluciones recientemente visitadas se marcan como tabú para no caer en ellas nuevamente. La memoria puede ser de soluciones o de atributos, esta última tiene como objetivo registrar los atributos más comunes de un subconjunto de soluciones seleccionadas durante un cierto período de búsqueda que con más probabilidad lleven hacia mejores zonas para explorar. \cite{RiojasCanari2005BusquedaN-reinas}\end{quote}
+\paragraph{Largo plazo}
+“Su objetivo es diversificar la búsqueda sobre regiones poco exploradas y/o intensificar la búsqueda privilegiando los atributos que se presentan en las mejores soluciones.” \cite{RiojasCanari2005BusquedaN-reinas}
+\subsubsection{Estrategias}
+\paragraph{Intensificar}
+\begin{quote}La intensificación consiste en regresar a regiones ya exploradas para estudiarlas más a fondo. Para ello se favorece la aparición de aquellos atributos asociados a buenas soluciones encontradas. Para evitar regresar a óptimos locales cada cierto número de iteraciones, la búsqueda tabú utiliza además otra estrategia, como es la diversificación. \cite{RiojasCanari2005BusquedaN-reinas}\end{quote}
+\paragraph{Diversificar}
+\begin{quote}La Diversificación consiste en visitar nuevas áreas no exploradas del espacio de soluciones. Para ello se modifican las reglas de elección para incorporar a las soluciones atributos que no han sido usados frecuentemente. Una forma clásica de diversificación consiste en reiniciar periódicamente la búsqueda desde puntos elegidos aleatoriamente, si se tiene alguna información acerca de la región factible se puede hacer un ‘muestreo’ para cubrir la región en lo posible, si no, cada vez se escoge aleatoriamente un punto de partida (método multi arranque). \cite{RiojasCanari2005BusquedaN-reinas}\end{quote}
+%\paragraph{Re-encadenamiento (Path relinking)}
+%“Integración de las estrategias de intensificación y diversificación, por medio de la generación de nuevas soluciones obtenidas al explorar las trayectorias que conectan las buenas soluciones.” \cite{RiojasCanari2005BusquedaN-reinas}
+%\paragraph{Oscilación estratégica}
+%“No detenerse cuando se llega al “límite”, sino cruzarlo modificando la definición del vecindario y/o el criterio de evaluación.” \cite{RiojasCanari2005BusquedaN-reinas}
+
+%\subsection{Lenguaje de programación Python}
+
 %TODO: Hablar de librerias
-\subsection{Api Google Maps}
+%\subsection{Api Google Maps}
 
-\subsection{*Turismo}
+%\subsection{*Turismo}
+%Relacion con la tecnologia
 
-\subsection{~Puno}
-
-\subsection{*Metodología}
+%\subsection{Kamban}
 %TODO: Poner tabla porque se eligio
+%\subsubsection{Lenguaje de programación matemática}
+%\subsubsection{Algoritmos de de optimización}

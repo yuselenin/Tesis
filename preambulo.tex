@@ -1,37 +1,123 @@
-\usepackage[lmargin=2cm,rmargin=2cm,top=1.5cm,
-bottom=2cm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8x]{inputenc} %Ha sido cambiado agregando "x" por que no aceptaba °
-\usepackage[spanish,es-tabla]{babel}
-\parindent=0cm
-\usepackage{amsmath}
-\usepackage{amssymb,amsfonts,latexsym,cancel}
-\usepackage{array}
-\usepackage{bm}
-\usepackage{float}
-\usepackage{fancyhdr}
-\usepackage{graphicx}
-\usepackage{epstopdf}
+\usepackage[margin=1in]{geometry} % indica todo los margenes de 1 pulgada(2.54cm)
+\usepackage[T1]{fontenc} % revisar uso...
+\usepackage[utf8x]{inputenc} % para el soporte de las tildes,etc...;el oficial es "utf8" pero no soporta "°"
+\usepackage[spanish,es-tabla]{babel} % revisar uso...
+\usepackage{amsmath} % revisar uso...
+\usepackage{amssymb,amsfonts,latexsym,cancel} % revisar uso...
+\usepackage{array} % revisar uso...
+\usepackage{bm} % revisar uso...
+\usepackage{float} % revisar uso...
+\usepackage{fancyhdr} % revisar uso...
+\usepackage{graphicx} % revisar uso...
+\usepackage{epstopdf}% revisar uso...
 \usepackage[colorlinks = true,
             linkcolor = black,
             citecolor = black,
-            urlcolor = blue]{hyperref}
-\usepackage{longtable}
-\setcounter{MaxMatrixCols}{40}
-\usepackage{multicol}
-\usepackage{subfigure}
-\usepackage{titling}
-\usepackage{titlesec}
-\newcolumntype{E}{>{$}c<{$}}
-\usepackage{apacite}
-%\setlength{\parskip}{1em}
-\raggedright % alineado a la izquierda
-
-% oculta el texto de "Capitulo" 
-%\titleformat{\chapter}[display]
-%{\normalfont\bfseries}{}{0pt}{\Large}
+            urlcolor = blue]{hyperref} % modifica los estilos de las urls
+\setcounter{MaxMatrixCols}{40}  % revisar uso...
+\usepackage{multicol} % revisar uso...
+\usepackage{subfigure} % revisar uso...
+\usepackage{titling} % revisar uso...
+\newcolumntype{E}{>{$}c<{$}} % revisar uso...
+\usepackage{apacite} % usado para citar y el formato de la lista de referencias
+\raggedright % alinea a la izquierda
 \usepackage{pdfpages} % para insertar pdfs(anexos)
+\renewcommand{\thechapter}{\Roman{chapter}} % cambia la numeración de los capítulos en números romanos
+\usepackage{pdflscape} % para cambiar una pagina en horizontal
+\usepackage{longtable} % para acomodar en varias paginas una tabla grande
+% Para el uso de esquemas https://tex.stackexchange.com/questions/112175/brace-diagram-in- % no entiendo...
 
-\renewcommand{\thechapter}{\Roman{chapter}}
-\usepackage{pdflscape}
-\usepackage{longtable}
+\usepackage{titlesec} % revisar uso...(creo que title format lo usa)
+\titlespacing{\chapter}{0pt}{-50pt}{*0} % quita espacio antes del capitulo
+\titlespacing{\section}{0pt}{*0}{*0} % quita espacio antes y despues
+\titlespacing{\subsection}{0pt}{*0}{*0} % quita espacio antes y despues
+\titlespacing{\subsubsection}{0pt}{*0}{3pt} % quita espacio antes y despues
+\titlespacing{\paragraph}{0pt}{*0}{3pt} % quita espacio antes y despues
+\titlespacing{\subparagraph}{0pt}{*0}{2pt} % quita espacio antes y despues
+% Son necesario las dos secciones siguiente..
+\titleformat{\chapter}[display] % oculta el texto de "Capitulo..."
+    {\normalfont\centering} % centrado
+    {}
+    {0pt}
+    {\thechapter.\quad} % doc para sepadores https://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing?noredirect=1&lq=1
+
+\titleformat{name=\chapter,numberless}[display] % revisar uso...
+    {\normalfont\centering\bfseries}
+    {}
+    {0pt}
+    {}
+\titleformat{\section}[block]
+    {\normalfont\centering\bfseries}
+    {\thesection.}
+    {1em}
+    {} % estilos para la sección(nivel 1)
+\titleformat{\subsection}[block]
+    {\normalfont\bfseries}
+    {\thesubsection.}
+    {1em}
+    {} % estilos para subsección(nivel 2)
+% estilos para subsubsección(nivel 3)
+\titleformat{\subsubsection}[runin]% runin puts it in the same paragraph
+    {\normalfont\bfseries}% formatting commands to apply to the whole heading
+    {\thesubsubsection.}% the label and number
+    {}% space between label/number and subsection title
+    {\hspace{0.5in}}% formatting commands applied just to subsection title
+    [.]% punctuation or other commands following subsection title
+%\newcommand{\sectionbreak}{\clearpage}
+%\renewcommand{\thechapter}{} % para quitar los numeros romanos
+\renewcommand\thesection{\@arabic\c@section} % pone la numeracion sin el del capitulo según https://stackoverflow.com/questions/3978203/how-do-i-keep-my-section-numbering-in-latex-but-just-hide-it
+\usepackage{setspace}
+\setlength{\parindent}{0.5in} % pone sangria de 0.5 pulgada(1.27cm)
+\titleformat{\paragraph}[runin]
+    {\normalfont\bfseries\itshape}
+    {}
+    {}
+    {\hspace{0.5in}}
+    [.] % estilos para párrafo(nivel 4)
+\titleformat{\subparagraph}[runin]
+    {\normalfont\itshape}
+    {}
+    {}
+    {\hspace{0.5in}}
+    [.] % estilos para (nivel 5)
+\usepackage{mathptmx}
+
+% Sección que se encarga de modificar los estilos de la descripcion de las figuras y tablas.
+% extraido de https://tex.stackexchange.com/questions/254254/how-to-set-figures-and-tables-captions-in-apa-style-without-using-apa6-class
+\usepackage{caption}
+\DeclareCaptionLabelSeparator*{spaced}{\\[1ex]}
+\captionsetup[table]{textfont=it,format=plain,justification=justified,
+  singlelinecheck=false,labelsep=spaced,skip=.3em}
+\captionsetup[figure]{labelsep=period,labelfont=it,justification=justified,
+  singlelinecheck=false,font=doublespacing}
+% pone la numeracion de acuerdo a todo el doumentos no por capitulos
+%\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+%\renewcommand{\thefigure}{\arabic{figure}}
+%\renewcommand{\thetable}{\arabic{table}}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+% TODO: Falta poner "Tabla..." en el indice, tambien de la imagenes
+% Tabla 1. El título debe ser breve y descriptivo.	3
+
+\let\oldquote\quote % es necesario para que funciona la siguiente indicación
+\renewcommand\quote{\setlength{\leftmargini}{.5in}\oldquote} % cambia la identacion de los bloques "quote"
+
+\usepackage{multirow,tabularx} % usado para poner multiples filas y columnas https://tex.stackexchange.com/questions/78169/table-rowspan-and-colspan
+
+\usepackage{tocbasic}
+
+\DeclareTOCStyleEntry[
+  entrynumberformat=\entrynumberwithprefix{\figurename},
+  dynnumwidth,
+  numsep=0.5em
+]{tocline}{figure}
+\DeclareTOCStyleEntry[
+  entrynumberformat=\entrynumberwithprefix{\tablename},
+  dynnumwidth,
+  numsep=0.5em
+]{tocline}{table}
+\newcommand\entrynumberwithprefix[2]{#1\hfill#2.\hfill}
+
+% para quitar espacios de las listas, https://texfaq.org/FAQ-complist
+\usepackage{enumitem}

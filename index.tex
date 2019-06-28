@@ -1,22 +1,24 @@
 \documentclass[11pt, a4paper]{report}
-
 \input{preambulo}
 \begin{document}
-
+\doublespacing
+\def\thesistitle{Implementación de un modelo matemático para la planificación de un viaje personalizado basado en optimización multiobjetivo para los turistas en la región Puno} % variable
 \include{Portada/portada}
 \pagenumbering{roman}
 
 %\input{Dedicatoria/dedicatoria}
 %\input{Agradecimientos/agradecimientos}
-\renewcommand{\contentsname}{TABLA DE CONTENIDO }
+\renewcommand{\contentsname}{Tabla de contenidos}
+\let\origaddvspace\addvspace % quita los espacios de capítulos en la lista de tablas y figuras. segun https://tex.stackexchange.com/questions/121879/remove-spacing-between-per-chapter-figures-in-lof
+ \renewcommand{\addvspace}[1]{}
 \tableofcontents
 \clearpage
 \listoftables
 \clearpage
 \listoffigures
 \clearpage
+\renewcommand{\addvspace}[1]{\origaddvspace{#1}}
 
-\setlength{\parskip}{1em}
 \pagenumbering{arabic}
 \include{Capitulo1/capitulo1}
 \include{Capitulo2/capitulo2}
